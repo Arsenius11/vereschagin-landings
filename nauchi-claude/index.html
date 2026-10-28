@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Научи Claude писать как ты</title>
+<meta name="description" content="Промпт, который учит Claude писать твоим голосом. Бесплатно.">
+
+<!-- ЯНДЕКС.МЕТРИКА: заменить 00000000 на номер счётчика (2 места: тут и в noscript ниже) -->
+<script>
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();
+  for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  ym(00000000, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/00000000" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+<!-- /ЯНДЕКС.МЕТРИКА -->
+
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 640px; margin: 0 auto; padding: 48px 16px; background: #fff; color: #111; }
+  button, .btn { display: inline-block; padding: 14px 22px; border: 0; border-radius: 10px; font-size: 16px; cursor: pointer; text-decoration: none; margin: 8px 8px 0 0; }
+  .copy { background: #111; color: #fff; }
+  .bot { background: #2aabee; color: #fff; }
+  pre { white-space: pre-wrap; background: #f4f4f4; padding: 16px; border-radius: 10px; }
+</style>
+</head>
+<body>
+  <!-- ЗАГЛУШКА: сюда встанет лендинг из дизайн-системы -->
+  <h1>Научи Claude писать как ты</h1>
+  <pre id="prompt">Здесь будет промпт.</pre>
+
+  <!-- Цель Метрики: copy_prompt (тип «JavaScript-событие», идентификатор copy_prompt) -->
+  <button class="copy" onclick="copyPrompt()">Скопировать промпт</button>
+
+  <!-- Цель Метрики: open_bot. ИМЯ_БОТА заменить на username бота -->
+  <a class="btn bot" href="https://t.me/ИМЯ_БОТА?start=landing"
+     onclick="goal('open_bot')" target="_blank" rel="noopener">Забрать в боте</a>
+
+<script>
+  var YM_ID = 00000000; // тот же номер счётчика
+  function goal(name) { try { ym(YM_ID, 'reachGoal', name); } catch (e) {} }
+  function copyPrompt() {
+    var text = document.getElementById('prompt').innerText;
+    navigator.clipboard.writeText(text).then(function () { goal('copy_prompt'); });
+  }
+</script>
+</body>
+</html>
